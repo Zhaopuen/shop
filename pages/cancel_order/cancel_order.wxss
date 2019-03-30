@@ -1,0 +1,54 @@
+/* pages/cancel_order/cancel_order.wxss */
+.cancel_ico {
+  width: 140rpx;
+  height: 140rpx;
+  margin: 0 auto;
+  margin-top: 300rpx;
+}
+.cancel_ico image {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+}
+
+.cancel_text1 {
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 100rpx;
+	font-size: 36rpx;
+	color: #ff9305;
+	opacity: 0.8;
+}
+.cancel_text2{
+  text-align: center;
+	font-size: 30rpx;
+	color: #444444;
+  margin-bottom: 20rpx;
+}
+.cancel_text3 {
+  text-align: center;
+	font-size: 30rpx;
+	color: #aaaaaa;
+}
+
+.bottom_btn {
+  width: 90%;
+  margin-top: 240rpx;
+  overflow: hidden;
+  margin-left: 5%;
+}
+.bottom_btn .btn_list {
+	width: 50%;
+  float: left;
+}
+.bottom_btn .btn_list view {
+	width: 260rpx;
+	height: 100rpx;
+	border-radius: 50rpx;
+	border: solid 2rpx #e0e0e0;
+  text-align: center;
+  font-size: 28rpx;
+	line-height: 100rpx;
+	color: #aaaaaa;
+  margin: 0 auto;
+}

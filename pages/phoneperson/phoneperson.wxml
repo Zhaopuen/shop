@@ -1,0 +1,110 @@
+<!--pages/shop_address/shop_address.wxml-->
+<!--<view>
+  <scroll-view class='bg-gray overflow' scroll-y >
+    <view class='hidden'>
+      <view class='shop_infobox'>
+        <view class='shop_addInfor'>
+          <view class="shop_addInfo_title">商户名</view>
+          <input placeholder='请填写商户名全称' bindinput='getNameValue'  value='{{name}}' class="yanzhengma" /> 
+        </view>
+        <view class='shop_addInfor'>
+          <view class="shop_addInfo_title">法人姓名</view>
+          <input placeholder='请填写法人姓名' bindinput='getPersonName' value='{{nameperson}}' class="yanzhengma" /> 
+        </view>
+        <view class='shop_addInfor'>
+          <view class="shop_addInfo_title">商铺地址</view>
+          <navigator url="../shop_address/shop_address">
+            <input placeholder='请选择所在区域街道填写具体门牌号' bindinput='getCodeValue' value='{{address}}' class="yanzhengma" disabled='true' /> 
+            <image src="../../images/dayu.png" class="shop_addImgss"></image>
+          </navigator>
+        </view>
+        <view class='shop_addInfor'>
+          <view class="shop_addInfo_title">手机号</view>
+          <navigator url="../phone/phone">
+            <input placeholder='请认证手机号' bindinput='getCodeValue' value='{{telephone}}' class="yanzhengma" disabled='true' />
+            <image src="../../images/dayu.png" class="shop_addImgss"></image>
+          </navigator> 
+        </view>
+        <view class='shop_addInfor'>
+          <view class="shop_addInfo_title">证件上传</view>
+          <navigator url="../upload_photo/upload_photo">
+            <input placeholder='营业执照、收运协议拍照上传' bindinput='getCodeValue' value='{{code}}' class="yanzhengma" disabled='true' /> 
+            <image src="../../images/dayu.png" class="shop_addImgss"></image>
+          </navigator> 
+        </view>
+        <view class='shop_btn' bindtap='save'>保存</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>-->
+
+<view class="collection_shop">
+  <view class="collection_shoptop">
+    <view class="collection_shoptop_left">
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+      <image src="{{successImg}}" class="successimg"></image>
+      <view>
+        <image src="../../images/address.png"></image>
+        <span>{{shopname=="待完善" || shopname == "待审核" ? "店铺认证中" : shopname}}</span>
+      </view>
+    </view>
+    <view class="collection_shoptop_right">
+      <!-- <image src="../../images/avatar.png"></image> -->
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="collection_shoplist">
+      <view class="collection_shoplistone">
+        <image src="../../images/phone.png" style="margin: auto auto 29rpx;"></image>
+        <text>呼叫记录</text>
+      </view>
+      <view class="collection_shoplistone">
+        <image src="../../images/news.png" style="width:64rpx;height:51rpx;margin: 7rpx auto 36rpx;"></image>
+        <text>新闻公告</text>
+      </view>
+      <view class="collection_shoplistone">
+        <image src="../../images/question.png" style="width:64rpx;height:67rpx;margin: auto auto 27rpx;"></image>
+        <text>问题咨询</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="collection_shopbottom">
+    <view class="collection_baddress" bindtap="phone">
+      <image src="../../images/phonelist.png" class="address"></image>
+      <text>手机认证</text>
+      <view class="collection_status">
+        <span style="color: {{phonenum == '待审核' ? 'red' : (phonenum == '待完善' ? '#f1f1f1' : '#DCDCDC')}}">{{phonenum}}</span>
+        <image src="../../images/dayu.png" class="dayu"></image>
+      </view>
+    </view>
+  </view>
+  
+</view>
+
+<view class="maskbox" wx:if="{{isShowSuceess}}">
+  <view class='maskback' bindtap="addyuyue">
+    <view class="makmid">
+      <image src="../../images/car.png"></image>
+    </view>
+  </view>
+</view>
+
+
+<view class="maskbox" wx:if="{{isShowFail}}">
+  <view class='maskback' bindtap="failmask">
+    <view class="makmid">
+      <text>未通过审核</text>
+      <span>点击查看原因</span>
+    </view>
+  </view>
+</view>
+
+<view class="failmask" wx:if="{{failIsShow}}">
+  <view class="failmid">
+    <view class="fail_top">
+      <text>您的店铺未通过审核</text>
+      <p>{{reasonInfo}}</p>
+    </view>
+    <view class="fail_btn" bindtap="failKnow">朕知道了</view>
+  </view>
+</view>

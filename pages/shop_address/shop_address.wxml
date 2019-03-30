@@ -1,0 +1,18 @@
+<!--pages/shop_address/shop_address.wxml-->
+<form bindsubmit='searchBox' class="locationbox">
+  <view class="shop_infobox">
+    <view class="shop_addDetail">
+      <input bindinput='detailAddress' placeholder='请输入所在街道（不用输入省市区县名称）' name='address_detail' value="{{address}}"></input>
+    </view>
+    <view class="shop_addDetail">
+      <input bindinput='address' placeholder='请输入具体门牌号' name='address_detail' value="{{addressDetail}}"></input>
+    </view>
+    <view class="shop_addInfor">
+      <view class="shop_addInfo_address">
+        <input class="report_addressinput ell" placeholder='请选择地址' value="{{location}}" bindinput="detailAddress" disabled style="color: {{location == '已成功标记位置，点图标可重新定位' ? '#32D104' : '#FF0000'}}"></input>
+        <image src="{{locationimg}}" bindtap="getlocationaddress"></image>
+      </view>
+    </view>
+    <button form-type='submit' class="shop_btn">{{btnvalue}}</button>
+  </view>
+</form>

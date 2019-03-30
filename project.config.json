@@ -1,0 +1,115 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.3",
+	"appid": "wx07646ce98f896f8f",
+	"projectname": "%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 9,
+			"list": [
+				{
+					"id": 0,
+					"name": "已接单",
+					"pathName": "pages/map_orders/map_orders",
+					"query": "order_id=2019012210298495",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "手机认证",
+					"pathName": "pages/phone/phone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "认证",
+					"pathName": "pages/data_information/data_information",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "认证实施",
+					"pathName": "pages/data_information/data_information",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "正在呼叫",
+					"pathName": "pages/in_thecall/in_thecall",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "useradd",
+					"pathName": "pages/useradd/useradd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "休息",
+					"pathName": "pages/in-therest/in-therest",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "已接单",
+					"pathName": "pages/ordered/ordered",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "司机位置",
+					"pathName": "pages/map_orders/map_orders",
+					"scene": null
+				}
+			]
+		}
+	}
+}

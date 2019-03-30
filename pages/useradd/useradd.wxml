@@ -1,0 +1,21 @@
+<!--pages/useradd/useradd.wxml-->
+<view class='shop_infobox'>
+  <view class='shop_addInfor'>
+    <view class="shop_inputbox">
+      <input placeholder='请输入和他微信绑定的手机号码' bindinput='getPhoneValue' class="phone_input" value='{{phone}}' style='width:65%;'/> 
+      <view class='codeBtn' bindtap='getCode' disabled='{{disabled}}' >{{codename}}</view>
+    </view>
+  </view>
+  <view class="phoneuse" wx:if="{{phoneIsShow}}">他的手机号已经被占用</view>
+  <view class='shop_addInfor' style="margin-top:17rpx;">
+    <input placeholder='请输入短信验证码' bindinput='getCodeValue' value='{{code}}' class="yanzhengma" /> 
+  </view>
+  <view class='shop_addInfor' style="margin-top:17rpx;">
+    <input placeholder='请输入职工名称' bindinput='getnameValue' value='{{username}}' class="yanzhengma" /> 
+  </view>
+  <view class='shop_btn' catchtap="save">提交</view>
+   <!-- wx:if="{{isShowDelete}}" -->
+  <view class="adduserbtn" catchtap="deleteuser" wx:if="{{isShowDelete}}">
+    <view>删除这个员工<span></span></view>
+  </view>
+</view>

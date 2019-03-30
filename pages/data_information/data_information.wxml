@@ -1,0 +1,140 @@
+<view class="collection_shop">
+  <view class="collection_shoptop">
+    <view class="collection_shoptop_left">
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+      <image src="{{successImg}}" class="successimg"></image>
+      <view>
+        <image src="../../images/address.png"></image>
+        <span>{{shopname=="待完善" || shopname == "待审核" ? "店铺认证中" : shopname}}</span>
+      </view>
+    </view>
+    <view class="collection_shoptop_right">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="collection_shoplist">
+      <view class="collection_shoplistone">
+        <image src="../../images/phone.png" style="margin: auto auto 29rpx;"></image>
+        <text>呼叫记录</text>
+      </view>
+      <view class="collection_shoplistone">
+        <image src="../../images/news.png" style="width:64rpx;height:51rpx;margin: 7rpx auto 36rpx;"></image>
+        <text>新闻公告</text>
+      </view>
+      <view class="collection_shoplistone">
+        <image src="../../images/question.png" style="width:64rpx;height:67rpx;margin: auto auto 27rpx;"></image>
+        <text>问题咨询</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 店铺名称 -->
+  <view class="collection_shopbottom" wx:if="{{!phonelist}}">
+    <view class="collection_baddress" bindtap="shopname">
+      <image src="../../images/home.png" class="address" style="height:38rpx;margin-top:4rpx;"></image>
+      <text>店铺名称</text>
+      <view class="collection_status">
+        <span style="color: {{shopname == '待审核' ? 'red' : (shopname == '待完善' ? '#f1f1f1' : '#DCDCDC')}}">{{shopname}}</span>
+        <image src="../../images/dayu.png" class="dayu"></image>
+      </view>
+    </view>
+
+    <!-- 店铺地址 -->
+    <view class="collection_baddress" bindtap="shopadd">
+      <image src="../../images/shopaddress.png" class="address"></image>
+      <text>店铺地址</text>
+      <view class="collection_status">
+        <span style="color: {{address == '待审核' ? 'red' : (address == '待完善' ? '#f1f1f1' : '#DCDCDC')}}">{{address}}{{addressDetails}}</span>
+        <image src="../../images/dayu.png" class="dayu"></image>
+      </view>
+    </view>
+
+    <!-- 手机认证 -->
+    <view class="collection_baddress" bindtap="phone">
+      <image src="../../images/phonelist.png" class="address"></image>
+      <text>手机认证</text>
+      <view class="collection_status">
+        <span style="color: {{phone == '待审核' ? 'red' : (phone == '待完善' ? '#f1f1f1' : '#DCDCDC')}}">{{phone}}</span>
+        <image src="../../images/dayu.png" class="dayu"></image>
+      </view>
+    </view>
+
+    <!-- 执照认证 -->
+    <view class="collection_baddress" bindtap="photoUplaod">
+      <image src="../../images/card.png" class="address" style="height:31rpx;margin-top:8rpx;"></image>
+      <text>执照认证</text>
+      <view class="collection_status">
+        <span style="color: {{code == '待审核' ? 'red' : (code == '待完善' ? '#f1f1f1' : '#DCDCDC')}}">{{code}}</span>
+        <image src="../../images/dayu.png" class="dayu"></image>
+      </view>
+    </view>
+
+    <!-- 职工管理 -->
+    <view class="collection_baddress" bindtap="user" style="border-bottom:none;">
+      <image src="../../images/phonelist.png" class="address" style="height:40rpx;margin-top:5rpx;"></image>
+      <text>职工管理</text>
+      <view class="collection_status">
+        <image src="../../images/dayu.png" class="dayu"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 职工管理的手机认证 -->
+  <view class="collection_shopbottom" wx:if="{{phonelist}}">
+    <view class="collection_baddress" bindtap="phone">
+      <image src="../../images/phonelist.png" class="address"></image>
+      <text>手机认证</text>
+      <view class="collection_status">
+        <span style="color: {{phonenum == '待审核' ? 'red' : (phonenum == '待完善' ? '#f1f1f1' : '#DCDCDC')}}">{{phonenum}}</span>
+        <image src="../../images/dayu.png" class="dayu"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 审核成功的图标 -->
+<view class="maskbox" wx:if="{{isShowSuceess}}">
+  <view class='maskback' bindtap="addyuyue">
+    <view class="makmid">
+      <image src="../../images/car.png"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 未通过审核 -->
+<view class="maskbox" wx:if="{{isShowFail}}">
+  <view class='maskback' bindtap="failmask">
+    <view class="makmid">
+      <text>未通过审核</text>
+      <span>点击查看原因</span>
+    </view>
+  </view>
+</view>
+
+<!-- 完善资料 -->
+<view class="maskbox" wx:if="{{isShowFirst}}">
+  <view class='maskback'>
+    <view class="makmid">
+      <text class="wanshan">请完善资料</text>
+    </view>
+  </view>
+</view>
+
+<!-- 等待审核 -->
+<view class="maskbox" wx:if="{{waitShow}}">
+  <view class='maskback'>
+    <view class="makmid">
+      <text class="wanshan">等待审核</text>
+    </view>
+  </view>
+</view>
+
+<!-- 未通过审核 -->
+<view class="failmask" wx:if="{{failIsShow}}">
+  <view class="failmid">
+    <view class="fail_top">
+      <text>您的店铺未通过审核</text>
+      <p>{{reasonInfo}}</p>
+    </view>
+    <view class="fail_btn" bindtap="failKnow">朕知道了</view>
+  </view>
+</view>

@@ -1,0 +1,103 @@
+/**in-therest.wxss**/
+/* 工作时间 提示 */
+.approve {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 60rpx;
+  padding-top: 60rpx;
+  overflow: hidden;
+}
+.approve .approve_ft {
+  float: left;
+	width: 80%;
+	height: 72rpx;
+	background-color: #222222;
+	border-radius: 80rpx;
+  box-sizing: border-box;
+  padding: 11rpx 20rpx;
+  opacity: 1;
+  transition: .2s ease all;
+}
+.approve .approve_transition {
+  opacity: 0;
+}
+.approve .approve_ft .approve_ico {
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+}
+.approve .approve_ft .approve_txt {
+  max-width: 300rpx;
+  overflow: hidden;
+  float: left;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #cccccc;
+  line-height: 50rpx;
+  margin-left: 8rpx;
+}
+.approve .approve_ft .approve_ico2 {
+  width: 50rpx;
+  height: 50rpx;
+  float: right;
+}
+.approve .approve_rt {
+  float: right;
+  width: 15%;
+  position: relative;
+}
+.approve .approve_rt .us_ico {
+	width: 80rpx;
+	height: 80rpx;
+  border-radius: 50%;
+  float: right;
+}
+.approve .approve_rt .tag_a {
+  position: absolute;
+  top: 5rpx;
+  right: 5rpx;
+  width: 22rpx;
+  height: 22rpx;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: #fddb00;
+  border: 5rpx solid #fff;
+}
+/* 休息中 */
+.content{
+  margin-top: 430rpx;
+}
+.content .call_btn {
+	width: 300rpx;
+	height: 300rpx;
+	background-color: #fddb00;
+	box-shadow: 0rpx 10rpx 40rpx 0rpx rgba(253, 219, 0, 0.5);
+  border-radius: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.content .call_btn .call_num {
+	font-size: 40rpx;
+	color: #444444;
+  padding-top: 100rpx;
+}
+.content .call_btn .call_btn_text {
+	font-size: 40rpx;
+	color: #444444;
+  padding-top: 30rpx;
+}
+/* 工作时间 */
+.content .reset_num {
+  box-sizing: border-box;
+  padding: 0 60rpx;
+  text-align: center;
+  font-size: 28rpx;
+  margin-top: 280rpx;
+  color: #666666;
+}

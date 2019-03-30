@@ -1,0 +1,24 @@
+<!--pages/shop_address/shop_address.wxml-->
+<!-- <view> -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <text>手机号码验证</text>
+    </view>
+  </view> -->
+  <!-- <scroll-view class='bg-gray overflow' scroll-y > -->
+    <!-- <view class='hidden'> -->
+      <view class='shop_infobox'>
+        <view class='shop_addInfor'>
+          <view class="shop_inputbox">
+            <input placeholder='请输入手机号' bindinput='getPhoneValue' class="phone_input" value='{{phone}}' style='width:65%;'/> 
+            <view class='codeBtn' bindtap='getCode' disabled='{{disabled}}' >{{codename}}</view>
+          </view>
+        </view>
+        <view class='shop_addInfor' style="margin-top:17rpx;">
+          <input placeholder='请输入验证码' bindinput='getCodeValue' value='{{code}}' class="yanzhengma" /> 
+        </view>
+        <view class='shop_btn' bindtap='save'>{{btnvalue}}</view>
+      </view>
+    <!-- </view> -->
+  <!-- </scroll-view>
+</view> -->

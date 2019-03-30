@@ -1,0 +1,37 @@
+<!--pages/map_orders/map_orders.wxml-->
+<!-- 订单信息 -->
+<view class='order'>
+  <view class='order_info'>
+    <view class='order_title'>司机距离您1500米，请耐心等待</view>
+    <view class="ordertong">本次预约：{{barlle}}桶（可取消重新下单）</view>
+  </view>
+  <view class='order_ico'>
+    <image src='../../images/people.png'></image>
+    <view class='soli'></view>
+  </view>
+</view>
+<!--地图  -->
+<view class="map_container">
+  <!-- <map id="myMap" longitude="{{shop_lnt}}" latitude="{{shop_lat}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%;"></map> -->
+  <!-- <map id="myMap" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%;"></map> -->
+   <map id="map" polyline="{{polyline}}" markers="{{markers}}" include-points="{{markers}}" style="width: 100%; height: 765rpx;"  scale="15"></map>
+</view>
+<!--地址-->
+<view class='site_content'>
+  <view class='site_caption'>
+    <view class='site_ft'>
+      <view class='site_fticon'>
+        <image src='../../images/driver.png'></image>
+      </view>
+      <view class='site_info'>
+        <view class='title'>司机</view>
+        <view class='name'>{{driverNames}}（{{driverCar}}）</view>
+      </view>
+    </view>
+    <view class='site_rt' bindtap='call_driver'><image src='../../images/call.png'></image></view>
+  </view>
+  <navigator url='../ordered/ordered' hover-class='none'>
+    <button class="returnbtn">返回</button> 
+  </navigator>
+  
+</view>

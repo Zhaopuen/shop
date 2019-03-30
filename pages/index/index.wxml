@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<!-- 认证 -->
+<navigator url='../data_information/data_information' hover-class='none' wx:if="{{callIf}}">
+  <view class='approve'>
+    <view class="approve_rt">
+      <image class='us_ico' src='../../images/people.png'></image>
+      <view class='tag_a'></view>
+    </view>
+  </view>
+</navigator>
+
+<!-- 已接单的提示top -->
+<!-- <navigator url='../data_information/data_information' hover-class='none'> -->
+  <view class='approve' wx:if="{{locationIf}}">
+    <view class="approve_ft approve_on_off">
+      <image class='approve_ico' src='../../images/message.png'></image>
+      <text class='approve_txt'>{{toptext}}</text>
+      <image class='approve_ico2' src='../../images/end.png' bindtap='approveClick'></image>
+    </view>
+    <view class="approve_rt">
+      <image class='us_ico' src='../../images/people.png'></image>
+      <view class='tag_a'></view>
+    </view>
+  </view>
+<!-- </navigator> -->
+
+<!-- 休息中的提示 -->
+<view class='approve' wx:if="{{worktime}}">
+  <view class="approve_ft approve_on_off">
+    <image class='approve_ico' src='../../images/message.png'></image>
+    <text class='approve_txt'>{{toptext}}</text>
+    <image class='approve_ico2' src='../../images/end.png' bindtap='approveClick'></image>
+  </view>
+  <view class="approve_rt">
+    <image class='us_ico' src='../../images/people.png'></image>
+    <view class='tag_a'></view>
+  </view>
+</view>
+
+<!-- 计时器 -->
+<view class='approvess' wx:if="{{timeIf}}">
+  <view class="countDownTimeView">
+    <view class="voteText">{{time}}</view>
+  </view>
+</view>
+
+<view class='content'>
+  <!-- 呼叫 -->
+  <view class='call_btn_box' bindtap="send" wx:if="{{callIf}}" style="margin-top:460rpx">
+    <view class='call_btn'>
+      <view class='call_num' style="padding-top: 100rpx">{{barrel}}桶</view>
+    </view>
+    <view class="call_btn" wx:if="{{resting}}">
+      <view class='call_num' style="padding-top: 110rpx;font-size: 50rpx">休息中</view>
+      <view>{{point}}</view>
+    </view>
+  </view>
+
+  <!-- 休息中 -->
+  <!-- <view class='call_btn_box' style="margin-top:460rpx" wx:if="{{worktime}}">
+    <view class='call_btn'>
+      <view class='call_num' style="padding-top: 110rpx;font-size: 50rpx">休息中</view>
+      <view>{{point}}</view>
+    </view>
+  </view> -->
+
+  <!-- 呼叫成功 // 订单已接收 -->
+  <view class='call_btn_box' wx:if="{{!callIf}}">
+    <view class='call_btn'>
+      <view class='call_num'>{{barrel}}桶</view>
+      <view class='call_btn_text'>{{call_text}}</view>
+      <view class=''>{{point}}</view>
+    </view>
+    <view class="pulse" wx:if="{{donghua}}"></view>
+    <view class="pulse1" wx:if="{{donghua}}"></view>
+  </view>
+  <view class='reset_num' bindtap='cancelCall' wx:if="{{!callIf}}">{{btnvalue}}</view>
+  
+  <!-- 改变数量 -->
+  <view class='barrel_number' wx:if="{{callIf}}" style="display: {{resting == true ? 'none' : 'block'}}">
+    <view class='reduce_num' bindtap='reduceClick'>
+      <image src='../../images/jian.png'></image>
+    </view>
+    <view class='add_num' bindtap='addClick'>
+      <image src='../../images/jia.png'></image>
+    </view>
+  </view>
+
+  <!-- 工作时间 -->
+  <view class="timework" wx:if="{{worktime}}">工作时间为 {{morning_work_time}}，{{afternoon_work_time}}</view>
+</view>

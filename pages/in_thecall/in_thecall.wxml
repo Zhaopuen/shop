@@ -1,0 +1,29 @@
+<!--in_thecall.wxml-->
+<!-- 倒计时 -->
+<view class='approve'>
+  <view class="countDownTimeView">
+    <view class="voteText">{{countDownNum}}</view>
+  </view>
+</view>
+
+
+<view class='content'>
+  <!-- 呼叫中 -->
+
+    <view class='call_btn_box'>
+      <view class='call_btn'>
+        <view class='call_num'>{{barrel}}桶</view>
+        <view class='call_btn_text'>{{call_text}}</view>
+        <view class=''>{{point}}</view>
+      </view>
+      <view class="pulse" style="{{callFlag? 'display: block;':''}}"></view>
+      <view class="pulse1" style="{{callFlag? 'display: block;':''}}"></view>
+    </view>
+
+
+  <!-- 取消呼叫 -->
+  <!-- <navigator url='../cancel_order/cancel_order' hover-class='none'> -->
+    <view class='reset_num' bindtap='cancelCall'>取消呼叫</view>
+    <!-- <view class='reset_num' bindtap='driverLocation'>司机位置</view> -->
+  <!-- </navigator> -->
+</view>

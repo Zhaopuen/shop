@@ -1,0 +1,15 @@
+<!--pages/shop_address/shop_address.wxml-->
+<!-- <form bindsubmit='searchBox' class="locationbox"> -->
+  <view class="shop_infobox">
+    <view class="shop_addInfor">
+      <view bindtap="getLocation" wx:if="{{canLocation}}" class="shop_addInfo_address">
+        <text class="report_address ell">{{address}}</text>
+        <image src="../../images/add-s.png"></image>
+      </view>
+    </view>
+    <view class="shop_addDetail">
+      <input bindinput='getNameValue' placeholder='请输入店铺名称' name='address_detail' value="{{shopname}}"></input>
+    </view>
+    <button form-type='submit' class="shop_btn" bindtap="namesave">{{btnvalue}}</button>
+  </view>
+<!-- </form> -->

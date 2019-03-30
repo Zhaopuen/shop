@@ -1,0 +1,24 @@
+<!--in-therest.wxml-->
+<!-- 工作时间 提示 -->
+<view class='approve'>
+  <view class="approve_ft {{approve_on_off? '':'approve_transition'}}">
+    <image class='approve_ico' src='../../images/message.png'></image>
+    <text class='approve_txt'>认证通过后即可呼叫清运车</text>
+    <image class='approve_ico2' src='../../images/end.png' bindtap='approveClick'></image>
+  </view>
+  <view class="approve_rt" bindtap='approveClick'>
+    <image class='us_ico' src='../../images/people.png'></image>
+    <view class='tag_a'></view>
+  </view>
+</view>
+
+<view class='content'>
+  <!-- 休息中 -->
+  <view class='call_btn'>
+    <view class='call_num'>审核中</view>
+    <view class='call_btn_text'>· · ·</view>
+  </view>
+
+  <!-- 工作时间 -->
+  <view class='reset_num'>24小时内完成审核</view>
+</view>

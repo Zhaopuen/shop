@@ -1,0 +1,58 @@
+<!--pages/shop_address/shop_address.wxml-->
+<!-- <view> -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <text>证件上传</text>
+    </view>
+  </view> -->
+  <!-- <view class='view-page'>
+    <navbar page-name="你当前页面的名字"></navbar>
+    <view class='page-content' style='height:calc(100vh - {{navH}}px)'>
+ 
+    </view>
+  </view> -->
+  <!-- <scroll-view class='bg-gray overflow' style='height:calc(100vh - {{navH}}px)' scroll-y > -->
+    <!-- <view class='hidden'> -->
+      <view class="shop_infobox">
+        <view class="shop_addInfor">
+          <view class="question-images">
+            <block wx:key="*this">
+              <view class="uploadimgs" wx:if="{{!uploadjia}}">
+                <image class="q-image" src="{{images}}" mode="aspectFill">
+                </image>
+                <view class="imguploadmask">
+                  <button class="btnredry" bindtap="uploadImg">重新上传</button>
+                  <button class="yulan" bindtap="handleImagePreview">预览</button>
+                </view>
+              </view>
+            </block>
+            <view class="q-image-wrap" bindtap="uploadImg" wx:if="{{uploadjia}}">
+              <image src="../../images/jia2.png" ></image>
+              <text>请选择上传营业执照</text>
+            </view>
+          </view>
+        </view>
+        <view class="shop_addDetail">
+          <view class="question-images">
+            <block>
+              <view class="uploadimgs" wx:if="{{!uploadjiashou}}">
+                <image class="q-image" src="{{imgShou}}" mode="aspectFill">
+                </image>
+                <view class="imguploadmask">
+                  <button class="btnredry" bindtap="uploadImgShou">重新上传</button>
+                  <button class="yulan" bindtap="handleImagePreviewShou">预览</button>
+                </view>
+                
+              </view>
+            </block>
+            <view class="q-image-wrap" bindtap="uploadImgShou" wx:if="{{uploadjiashou}}">
+              <image src="../../images/jia2.png" ></image>
+              <text>请选择上传收运协议</text>
+            </view>
+          </view>
+        </view>
+        <view class="shop_btn" bindtap="photoBtn">{{btnvalue}} </view>
+      </view>
+    <!-- </view> -->
+  <!-- </scroll-view> -->
+<!-- </view> -->

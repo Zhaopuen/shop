@@ -1,0 +1,54 @@
+<!--pages/approve_in/approve_in.wxml-->
+<form bindsubmit='searchBox'>
+<view class="ltxt" style="padding-top: 20px;">
+  <view class="title">商户名</view>
+  <view class="textareas textareasz">
+    <input type="text" placeholder="请填写商户名全称" name='title' placeholder-class="inputstyle"></input>
+  </view>
+</view>
+<view class="ltxt">
+  <view class="title">手机</view>
+  <view class="textareas textareasz">
+    <input type="text" placeholder="请填写手机号码" name='phone' placeholder-class="inputstyle"></input>
+  </view>
+</view>
+<view class="ltxt">
+  <view class="title">商铺地址</view>
+  <view class="textareas textareasz">
+    <input type="text" placeholder="请选择所在区域街道填写具体门牌号" name='address' placeholder-class="inputstyle"></input>
+  </view>
+</view>
+<view class="ltxt imglist">
+  <view class="title">营业执照（拍照上传）</view>
+  <view class="icon-xiangji uploading_list" bindtap="chooseImg1">
+    <text class='addupimg'>+</text>
+  </view>
+  <view class="img_div1 upimgbox uploading_list" wx:for="{{imgs1}}" wx:for-item="item" wx:key="*this">
+    <image mode='widthFix' src="{{item}}" data-index="{{index}}" bindtap="previewImg" />
+    <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg1">
+      <image src='../../images/ded.png'></image>
+    </view>
+  </view>
+</view>
+<view class="ltxt imglist">
+  <view class="title">收运协议（拍照上传）</view>
+  <view class="icon-xiangji uploading_list" bindtap="chooseImg2">
+    <text class='addupimg'>+</text>
+  </view>
+  <view class="img_div1 upimgbox uploading_list" wx:for="{{imgs2}}" wx:for-item="item" wx:key="*this">
+    <image mode='widthFix' src="{{item}}" data-index="{{index}}" bindtap="previewImg" />
+    <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg2">
+      <image src='../../images/ded.png'></image>
+    </view>
+  </view>
+</view>
+
+<!-- 提交 -->
+<!-- <navigator hover-class='none' url='../index/index'> -->
+  <view class="btn_sbm">
+    <button form-type='submit'>提交</button>
+  </view>
+  <!-- <button class="btn_sbm" form-type='submit'>提交</button> -->
+  </form>
+  
+<!-- </navigator> -->

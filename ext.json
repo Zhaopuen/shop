@@ -1,0 +1,23 @@
+{
+  "extEnable": true,
+  "extAppid": "wx07646ce98f896f8f",
+  "directCommit": false,
+  "ext": {
+      "name": "collection",
+      "host": "https://www.nx.tt",
+      "api_url": "https://www.nx.tt/addon/collection/api",
+      "socket_url": "wss://www.nx.tt/wss",
+      "mpid": "8",
+      "uaid": "2",
+      "udid": 0
+  },
+  "extPages": {
+    "pages/logs/logs": {
+      "navigationBarTitleText": "logs"
+    }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

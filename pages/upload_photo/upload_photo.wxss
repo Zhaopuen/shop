@@ -1,0 +1,176 @@
+/* pages/upload_photo/upload_photo.wxss */
+.shop_infobox{
+  width:100%;
+  height:100%;
+  position: fixed;
+  background: #fafafa;
+  overflow: hidden;
+}
+.shop_addInfor{
+  width:100%;
+  height:auto;
+  overflow: hidden;
+  background: #fff;
+  margin-top:31rpx;
+}
+.shop_addInfo_title{
+  color:#444;
+  font-size: 32rpx;
+}
+.shop_addInfo_address{
+  width:92%;
+  height:100rpx;
+  line-height: 100rpx;
+  background: #fff;
+  border-radius:10rpx;
+  margin:30rpx 0;
+  padding:0 4%;
+}
+.shop_addInfo_address text{
+  font-size: 30rpx;
+  display:block;
+  float:left;
+}
+.shop_addInfo_address image{
+  width:60rpx;
+  height:60rpx;
+  display: block;
+  float:right;
+  margin-top: 18rpx;
+}
+.shop_addDetail{
+  width:100%;
+  height:auto;
+  overflow: hidden;
+}
+.shop_addDetail input{
+  display: block;
+  width:92%;
+  height:100rpx;
+  padding:0 4%;
+  background: #fff;
+  border-radius:10rpx;
+  margin:30rpx 0;
+  font-size: 30rpx;
+}
+.shop_btn{
+  width:85%;
+  height:100rpx;
+  background-color: #fddb00;
+	box-shadow: 0px 10px 20px 0px 
+		rgba(253, 219, 0, 0.35);
+	border-radius: 50px;
+  color:#222;
+  line-height: 100rpx;
+  text-align: center;
+  margin:60rpx auto;
+}
+
+/* 上传图片 */
+.q-image-wrap{
+  width:100%;
+  height:290rpx;
+  background-color: #ffffff;
+  border-radius:15rpx;
+  margin:30rpx 0;
+  position: relative;
+}
+.q-image-wrap text{
+  text-align: center;
+  margin-top: 120rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 60rpx;
+  margin: auto;
+  color:rgba(220,220,220,1);
+  font-size: 34rpx;
+}
+.q-image-wrap image{
+  width:80rpx;
+  height:80rpx;
+  position: absolute;
+  top:-70rpx;
+  right:0;
+  left:0;
+  bottom:0;
+  margin:auto;
+}
+
+page {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.view-page {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  position: absolute;
+  overflow: hidden;
+}
+.page-content {
+  box-sizing: border-box;
+  position: relative;
+  overflow-y: auto;
+}
+
+
+
+.uploadimgs{
+  width:100%;
+  height:300rpx;
+  margin: 30rpx 0;
+  position: relative;
+}
+.uploadimgs image{
+  width:100%;
+  height:100%;
+}
+button::after{
+  border:none;
+}
+.imguploadmask{
+  position: absolute;
+  width:50%;
+  height: 60rpx;
+  top:0;
+  right:0;
+  left:0;
+  bottom: 0;
+  margin: auto;
+  z-index: 888;
+}
+.btnredry{
+  width:180rpx;
+  height:60rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  /* right:30rpx; */
+  background: transparent;
+  border: 1px solid #000;
+  float:left;
+  border-radius:50px;
+  color:#000;
+}
+.yulan{
+  width:170rpx;
+  height:60rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  /* right:30rpx; */
+  background: transparent;
+  border: 1px solid #000;
+  /* float: right; */
+  border-radius:50px;
+  color:#000;
+  margin-right: 0;
+}
+.question-images{
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}

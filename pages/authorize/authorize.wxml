@@ -1,0 +1,17 @@
+<!--pages/login/login.wxml-->
+<view class="login_box">
+  <view class="login_middle">
+    <view class="login_top">
+      <image src="../../images/sqL.png"></image>
+      <text>授权信息</text>
+      <span></span>
+    </view>
+    <view class="login_content">申请获取你的昵称、头像信息，
+用于分享卡片展示。</view>
+    <view class="bottom">
+      <!-- <view  bindtap='get_location'>确认授权</view> -->
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="login_btn"> 确认授权 </button>
+      <image src="../../images/sqS.png"></image>
+    </view>
+  </view>
+</view>

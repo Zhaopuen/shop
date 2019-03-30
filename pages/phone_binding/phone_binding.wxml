@@ -1,0 +1,19 @@
+<!--pages/phone_binding/phone_binding.wxml-->
+<view class="ltxt" style="padding-top: 20px;">
+  <view class="textareas textareasz">
+    <input type="text" placeholder="请输入手机号码" placeholder-class="inputstyle"></input>
+    <view class='ednbtn' disabled='{{disabled}}' data-id="2" bindtap="getVerificationCode">
+        {{time}}
+      </view>
+  </view>
+</view>
+<view class="ltxt">
+  <view class="textareas textareasz">
+    <input type="text" placeholder="请输入短信验证码" placeholder-class="inputstyle"></input>
+  </view>
+</view>
+
+
+
+<!-- 提交 -->
+<view class="btn_sbm">提 交</view>

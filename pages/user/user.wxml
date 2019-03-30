@@ -1,0 +1,17 @@
+<!--pages/user/user.wxml-->
+<view class="userBox">
+  <view class="userMid">
+    <view class="userBoxli" wx:for="{{userList}}" wx:key="index" data-index="{{index}}">
+      <navigator url="../useradd/useradd?id={{item.phone}}">
+        <text class="username">{{item.name}}</text>
+        <view class="userBoxright">
+          <text>{{item.phone}}</text>
+          <image src="../../images/dayu.png"></image>
+        </view>
+      </navigator>
+    </view>
+    <view class="adduserbtn" bindtap="adduser">
+      <view>添加员工<span></span></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<!-- <view class="login_box">
+  <view class="login_mid">
+    <view class="login_img">
+      <image src="../../images/dlogin.png"></image>
+    </view>
+    <view class="login_content">
+      <text>通过验证之后
+  您方可进行接单操作</text>
+    </view>
+    <view class="login_btns">
+      <button class="loginBtn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">验证授权</button>
+    </view>
+  </view>
+</view> -->
+
+
+<!--pages/login/login.wxml-->
+<view class="login_box">
+  <view class="login_middle">
+    <view class="login_top">
+      <image src="../../images/sqL.png"></image>
+      <text>授权信息</text>
+      <span></span>
+    </view>
+    <view class="login_content">申请获取您的手机号，
+用于分享卡片展示。</view>
+    <view class="bottom">
+      <!-- <view  bindtap='get_location'>确认授权</view> -->
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="login_btn"> 确认授权 </button>
+      <image src="../../images/sqS.png"></image>
+    </view>
+  </view>
+</view>

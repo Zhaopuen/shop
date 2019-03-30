@@ -1,0 +1,40 @@
+<!--in_thecall.wxml-->
+<!-- 倒计时 -->
+<!-- <view class='approve'>
+  <view class="countDownTimeView">
+    <view class="voteText">{{countDownNum}}</view>
+  </view>
+</view> -->
+<navigator url='../data_information/data_information' hover-class='none'>
+  <view class='approve'>
+    <view class="approve_ft approve_on_off">
+      <image class='approve_ico' src='../../images/message.png'></image>
+      <text class='approve_txt'>司机即将到达，请准备好泔水桶</text>
+      <image class='approve_ico2' src='../../images/end.png' bindtap='approveClick'></image>
+    </view>
+    <view class="approve_rt">
+      <image class='us_ico' src='../../images/people.png'></image>
+      <view class='tag_a'></view>
+    </view>
+  </view>
+</navigator>
+
+<view class='content'>
+  <!-- 呼叫中 -->
+
+    <view class='call_btn_box'>
+      <view class='call_btn'>
+        <view class='call_num'>{{barrel}}桶</view>
+        <view class='call_btn_text'>已接单</view>
+        <view class=''>{{point}}</view>
+      </view>
+      <view class="pulse" style="{{callFlag? 'display: block;':''}}"></view>
+      <view class="pulse1" style="{{callFlag? 'display: block;':''}}"></view>
+    </view>
+
+
+  <!-- 取消呼叫 -->
+  <navigator url='../map_orders/map_orders' hover-class='none'>
+    <view class='reset_num' bindtap='driverLocation'>司机位置</view>
+  </navigator>
+</view>

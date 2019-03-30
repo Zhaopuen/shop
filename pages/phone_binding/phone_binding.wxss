@@ -1,0 +1,102 @@
+/* pages/phone_binding/phone_binding.wxss */
+
+page {
+  margin-bottom: 170rpx;
+}
+
+.ltxt {
+  padding: 0 30rpx;
+  padding-top: 16rpx;
+}
+
+.ltxt .title {
+  font-size: 28rpx;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #444;
+}
+
+.textareas {
+  min-height: 180rpx;
+  margin-bottom: 40rpx;
+  position: relative;
+  margin: 20rpx auto;
+  line-height: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 10rpx 60rpx 0rpx rgba(68, 68, 68, 0.1);
+  overflow: hidden;
+}
+
+.inputstyle {
+  color: rgba(170,170,170, 0.5);
+}
+
+.textareas .input_2 {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx;
+  border-color: #f1f1f1;
+  padding-top: 20rpx;
+  font-size: 28rpx;
+  height: 180rpx;
+  border: none;
+  font-family: sans-serif;
+  outline: none;
+  resize: none;
+  line-height: 1.45;
+}
+
+.wenti {
+  position: absolute;
+  right: 20rpx;
+  bottom: 0rpx;
+  font-size: 28rpx;
+  color: #aaa;
+}
+
+.textareasz {
+  min-height: 80rpx;
+}
+
+.textareasz input {
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  text-align: left;
+  color: #222;
+  border: none;
+  position: absolute;
+  width: 80%;
+  padding: 0 30rpx;
+  padding-right: 100rpx;
+  box-sizing: border-box;
+}
+.ednbtn {
+  font-size: 28rpx;
+  color: #222;
+  float: right;
+  margin-right: 30rpx;
+  padding: 0;
+  border: none;
+  background-color: rgba(255, 0, 0, 0);
+  line-height: 100rpx;
+}
+
+
+/* 提交 */
+
+.btn_sbm {
+	width: 600rpx;
+	height: 101rpx;
+	background-color: #fddb00;
+	box-shadow: 0rpx 10rpx 20rpx 0rpx rgba(253, 219, 0, 0.35);
+	border-radius: 50rpx;
+  line-height: 101rpx;
+  text-align: center;
+  color: #222;
+  font-size: 36rpx;
+  margin: 90rpx auto;
+}

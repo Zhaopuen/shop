@@ -1,0 +1,21 @@
+<!--pages/cancel_order/cancel_order.wxml-->
+<wxs src="./cancel_order.wxs" module="tools" />
+
+<view class='cancel_ico'>
+  <image src='../../images/-eg-no.png'></image>
+</view>
+<view class='cancel_text1'>{{tools.order_status(status)}}</view>
+<view class='cancel_text2'>您已取消此单</view>
+<view class='cancel_text3'>{{tools.dateFormat(datetime)}}</view>
+<view class='bottom_btn'>
+  <view class='btn_list'>
+    <navigator url='../index/index' hover-class='none'>
+      <view>返回首页</view>
+    </navigator>
+  </view>
+  <view class='btn_list'>
+    <navigator url='' hover-class='none'>
+      <view>投诉</view>
+    </navigator>
+  </view>
+</view>

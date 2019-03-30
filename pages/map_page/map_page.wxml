@@ -1,0 +1,36 @@
+<!--pages/map_page/map_page.wxml-->
+<!-- 订单信息 -->
+<view class='order'>
+  <view class='order_info'>
+    <view class='order_title'>已超时
+      <text>10</text> 分钟</view>
+    <view class='order_text'>（超时20分钟后可取消重新下单）</view>
+  </view>
+  <view class='order_ico'>
+    <image src='../../images/people.png'></image>
+    <view class='soli'></view>
+  </view>
+</view>
+<!--地图  -->
+<view class="map_container">
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%;"></map>
+</view>
+
+
+
+<!--地址-->
+<view class='site_content'>
+  <view class='site_caption'>
+    <view class='site_ft'>
+      <view class='site_fticon'>
+        <image src='../../images/driver.png'></image>
+      </view>
+      <view class='site_info'>
+        <view class='title'>司机</view>
+        <view class='name'>小马(宁A8006）</view>
+      </view>
+    </view>
+    <view class='site_rt'><image src='../../images/call.png'></image></view>
+  </view>
+  <view class='map_GPS' bindtap="launchAppError">取消</view>
+</view>

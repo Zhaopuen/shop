@@ -1,0 +1,68 @@
+/* pages/user/user.wxss */
+.userBox{
+  width: 100%;
+  height:auto;
+  overflow: hidden;
+}
+.userMid{
+  width:100%;
+  height:auto;
+  overflow: hidden;
+  background: #fff;
+}
+.userBoxli{
+  width:90%;
+  height:120rpx;
+  margin: 0 3% 0 7%;
+  line-height: 120rpx;
+  border-bottom: 1px solid #E2E2E2;
+}
+.userBoxli:last-of-type{
+  border-bottom: none !important;
+}
+.username{
+  float:left;
+  font-size: 30rpx;
+  color: #333;
+}
+.userBoxright{
+  width: 36%;
+  height:100%;
+  float: right;
+}
+.userBoxright text{
+  color: #DCDCDC;
+  font-size: 30rpx;
+  float:left;
+  text-align: right;
+}
+.userBoxright image{
+  width: 30rpx;
+  height: 35rpx;
+  float: right;
+  margin-top: 45rpx;
+}
+
+.adduserbtn{
+  text-align: center;
+  height:auto;
+  overflow: hidden;
+  position: relative;
+  padding:100rpx 0;
+}
+.adduserbtn view{
+  font-size: 34rpx;
+  height:auto;
+}
+.adduserbtn view span{
+  display: block;
+  width:130rpx;
+  height:18rpx;
+  background: #FDDB00;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  margin: auto;
+  margin-top: -26rpx;
+}

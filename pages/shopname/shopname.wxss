@@ -1,0 +1,75 @@
+/* pages/shop_address/shop_address.wxss */
+.shop_infobox{
+  width:100%;
+  height:100%;
+  position: fixed;
+  background: #fafafa;
+  overflow: hidden;
+}
+.shop_addInfor{
+  width:94%;
+  height:auto;
+  overflow: hidden;
+  padding: 0 3% 0;
+  background: #fff;
+}
+.shop_addInfo_title{
+  color:#444;
+  font-size: 32rpx;
+}
+.shop_addInfo_address{
+  width:100%;
+  height:100rpx;
+  line-height: 100rpx;
+  background: #fff;
+  border-radius:10rpx;
+  
+}
+.shop_addInfo_address text{
+  font-size: 30rpx;
+  display:block;
+  float:left;
+}
+.shop_addInfo_address image{
+  width:60rpx;
+  height:60rpx;
+  display: block;
+  float:right;
+  margin-top: 18rpx;
+}
+.shop_addDetail{
+  width:100%;
+  height:auto;
+  overflow: hidden;
+}
+.shop_addDetail input{
+  display: block;
+  width:86%;
+  height:100rpx;
+  padding:0 7%;
+  background: #fff;
+  box-shadow: 0px 3px 3px 0px 
+		rgba(68, 68, 68, 0.1);
+  font-size: 30rpx;
+}
+.shop_btn{
+  width:85%;
+  height:100rpx;
+  background-color: #fddb00;
+	box-shadow: 0px 10px 20px 0px 
+		rgba(253, 219, 0, 0.35);
+	border-radius: 50px;
+  color:#222;
+  line-height: 100rpx;
+  text-align: center;
+  margin:80rpx auto;
+  font-size: 36rpx;
+}
+.locationbox{
+  width:100%;
+  height:100%;
+  position:fixed;
+}
+button::after{
+  border: none;
+}

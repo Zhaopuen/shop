@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/data_information/data_information",
+    "pages/index/index",
+    "pages/in_thecall/in_thecall",
+    "pages/map_page/map_page",
+    "pages/in-therest/in-therest",
+    "pages/cancel_order/cancel_order",
+    "pages/complete/complete",
+    "pages/approve_in/approve_in",
+    "pages/map_orders/map_orders",
+    "pages/authorize/authorize",
+    "pages/phone/phone",
+    "pages/shop_address/shop_address",
+    "pages/upload_photo/upload_photo",
+    "pages/authshop/authshop",
+    "pages/login/login",
+    "pages/loginfail/loginfail",
+    "pages/shopname/shopname",
+    "pages/user/user",
+    "pages/useradd/useradd",
+    "pages/phoneperson/phoneperson",
+    "pages/userphone/userphone",
+    "pages/ordered/ordered"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于向司机展示路线"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
